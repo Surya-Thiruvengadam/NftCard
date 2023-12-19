@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --VerydarkbluemainBG: hsl(217, 54%, 11%);
+  --VerydarkbluecardBG: hsl(216, 50%, 16%);
+  --Verydarkblueline: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--VerydarkbluemainBG);
+}
+
+.full-container {
+  padding: 30px;
+}
+
+.main-container {
+  max-width: 23rem;
+  margin: 9rem auto;
+  background-color: var(--VerydarkbluecardBG);
+  padding: 2rem;
+  border-radius: 20px;
+}
+.main-container figure {
+  width: 100%;
+  position: relative;
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 255, 255, 0.54);
+  border-radius: 15px;
+  transition: 1s ease-in-out;
+  opacity: 0;
+}
+
+.overlay img {
+  transform: scale(0.2);
+}
+
+figure:hover .overlay {
+  opacity: 1;
+}
+
+.summary h1 {
+  color: var(--White);
+  font-size: 1.6rem;
+  line-height: 3;
+}
+.summary p {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: var(--Softblue);
+}
+
+.dates-container {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  line-height: 4;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+li {
+  display: inline-flex;
+  gap: 7px;
+}
+.firstchild {
+  color: var(--Cyan);
+}
+
+li img {
+  align-self: center;
+  width: 0.7em;
+}
+
+.secondchild img{
+  width: 1.2em;
+}
+
+.secondchild {
+  color: var(--Softblue);
+}
+
+footer {
+  display: flex;
+  padding: 1.5rem 0 0 0;
+  gap: 1em;
+
+  font-size: 1.3rem;
+}
+footer img {
+  width: 2em;
+  border: 1.7px solid var(--White);
+  border-radius: 100%;
+}
+
+p .Creation {
+  color: var(--Softblue);
+}
+
+p .name {
+  color: var(--White);
+}
+
+.summary h1:hover,
+.name:hover,
+.overlay:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+hr {
+  border-color: var(--Softblue);
+  opacity: 0.1;
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    font-size: 70%;
+  }
+}
